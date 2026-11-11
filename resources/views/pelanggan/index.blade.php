@@ -13,9 +13,7 @@
             <h1 class="h2 text-primary m-0">
                 <i class="fa-solid fa-users me-2"></i>Data Pelanggan
             </h1>
-            <!-- Menampilkan Nama & Role Pengguna yang sedang Login -->
             <div class="d-flex align-items-center gap-3">
-                @auth
                 <span class="fw-bold text-secondary">
                     <i class="fa-solid fa-user-circle me-1"></i>
                     {{ auth()->user()->name }} ({{ ucfirst(auth()->user()->role) }})
@@ -24,7 +22,6 @@
                     @csrf
                     <button type="submit" class="btn btn-outline-danger btn-sm">Logout</button>
                 </form>
-                @endauth
             </div>
         </div>
 
